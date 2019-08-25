@@ -1,4 +1,4 @@
-web: bundle exec rails server -p 8084
-web: lein run -m demo.web 8084
+web: bundle exec rails server -p $PORT
+web: lein run -m demo.web $PORT
 web: java -jar target/KRPP.war
 worker:  bundle exec rake jobs:work
