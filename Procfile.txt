@@ -1,4 +1,1 @@
-web: bundle exec rails server -p $PORT
-web: lein run -m demo.web $PORT
-web: java $JAVA_OPT5 -cp target/KRPP.war com.wslfinc.server.Publisher $PORT
-worker:  bundle exec rake jobs:work
+web: java $JAVA_OPTS -jar target/KRPP.jar --port $PORT target/*.war
